@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hemin Ji</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="css/fontawesome-free-5.15.4-web/css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <style>
+    /* CSS 코드 */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .img-fluid {
+      max-width: 50%;
+      height: auto;
+      border-radius: 0px;
+      margin: 10px;
+      box-shadow: 0 0 0.5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* 모달 스타일 */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    .modal-content img {
+      margin: auto;
+      display: block;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    /* 모달 닫기 버튼 스타일 */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* 모달 콘텐츠를 약간 어둡게 처리 */
+    .modal-backdrop.show {
+      opacity: 0.5;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Hemin Ji</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Works
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">Hemin Ji</h1>
+          <p class="lead mb-5 text-white-50">Inhalt</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <a data-toggle="modal" data-target="#modal-image-1">
+      <img src="noch.jpg" class="img-fluid"onclick="openModal()">>
+        </a>
+      <div class="card-body">
+        <h5 class="card-title">no Title</h5>
+      </div>
+      <div class="col-md-4 mb-4">
+          <a data-toggle="modal" data-target="#modal-image-1">
+        <img src="DSC_0161 부분, 고화질.jpg" class="img-fluid"onclick="openModal()">>
+          </a>
+        <div class="card-body">
+          <h5 class="card-title">Spsringbrunnen</h5>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="DSC_0017 부분, 고화질.jpg" class="img-fluid">
+        <h5 class="card-title">Blumenbeet</h5>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="DSC_0044 부분, 고화질.jpg" class="img-fluid">
+        <h5 class="card-title">Blumenbeet2</h5>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="DSC_2573 부분, 고화질.jpg" class="img-fluid">
+      <h5 class="card-title">Regenbogen</h5>
+    </div>
+    </div>
+  
+  </div>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .img-fluid {
+      max-width: 80%;
+      height: auto;
+      border-radius: 0px;
+      margin: 10px;
+      box-shadow: 0 0 0.5px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+
+  <!-- Projects Section -->
+  <h2>Recent Works</h2>
+  <div class="row">
+    <div class="col-md-4 mb-5
+
+      body {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 1.7;
+        color: #fff;
+        background: #0e0e0e;
+      }
+      
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      a:hover {
+        color: #dc3545;
+      }
+      
+      /* 네비게이션 바 */
+      nav {
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        padding: 0 100px;
+        background-color: #0e0e0e;
+        z-index: 999;
+      }
+      
+      nav .logo {
+        float: left;
+        height: 100%;
+      }
+      
+      nav .logo img {
+        height: 100%;
+      }
+      
+      nav ul {
+        float: right;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      
+      nav ul li {
+        list-style: none;
+        margin: 0 15px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      
+      nav ul li a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 10px;
+      }
+      
+      nav ul li a::before {
+        content: " position: absolute; bottom: -10px; left: 0; width: 100%; height: 2px; background-color: #dc3545;
+      transform: scaleX(0); transition: transform 0.3s; transform-origin: center; } nav ul li a:hover::before {
+      transform: scaleX(1); } nav ul li.active a::before { transform: scaleX(1); } /* 메인 섹션 */ section { position:
+      relative; height: 100vh; } section .container { position: absolute; top: 50%; left: 50%; transform:
+      translate(-50%, -50%); text-align: center; } section h1 { font-size: 72px; font-weight: 700; margin-bottom: 20px;
+      text-transform: uppercase; } section p { font-size: 18px; font-weight: 400; margin-bottom: 30px; } section .btn {
+      font-size: 16px; font-weight: 700; text-transform: uppercase; padding: 15px 40px; background-color: #dc3545;
+      color: #fff; border: none; border-radius: 50px; letter-spacing: 1px; transition: background-color 0.3s; } section
+      .btn:hover { background-color: #fff; color: #dc3545; border: 2px solid #dc3545; } section .btn-outline {
+      font-size: 16px; font-weight: 700; text-transform: uppercase; padding: 15px 40px; background-color: transparent;
+      color: #fff; border: 2px solid #fff; border-radius: 50px; letter-spacing: 1px; transition: background-color 0.3s;
+      } section .btn-outline:hover { background-color: #fff; color: #dc354 } </div>
+      <여기>
+    </div>
+
+
+
+
